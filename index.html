@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/Alfred-logo.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="images/Alfred-logo.png"
+      type="image/x-icon"
+    />
+    <title>Alfred Home Services</title>
+    <link rel="stylesheet" href="web.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- <style>
+      
+    </style> -->
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-left">
+        <a href="/">
+          <img
+            src="./images/Alfred-logo.png"
+            alt="Alfred Logo"
+            class="navbar-logo"
+        /></a>
+        <a href="/"><strong>Alfred</strong></a>
+      </div>
+
+      <div class="navbar-right">
+        <a href="/cart"><i class="fa fa-shopping-cart"></i></a>
+        <a href="javascript:void(0);" id="login-button"
+          ><i class="fa fa-user-astronaut"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login</h2>
+        <form id="login-form">
+          <div class="input-group">
+            <!-- <span class="input-group-addon"><i class="fa fa-phone"></i></span> -->
+            <input
+              type="tel"
+              class="form-control"
+              placeholder="Phone"
+              pattern="[0-9]{10}"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-red">
+            Send One Time Password
+          </button>
+          <div class="separator">or</div>
+          <button type="button" class="btn btn-light">
+            <i class="fa fa-envelope"></i> Continue with Email
+          </button>
+          <button type="button" class="btn btn-light">
+            <i class="fab fa-google"></i> Sign in with Google
+          </button>
+          <p class="account-prompt">
+            New to Alfred? <a href="#">Create account</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Sign up form -->
+    <div id="signup-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Sign up</h2>
+        <form id="signup-form">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email" required />
+          <label class="checkbox-container">
+            <input type="checkbox" required />
+            <span class="checkmark"></span>
+            I agree to the Terms of Service, Privacy Policy and Content
+            Policies.
+          </label>
+          <button type="submit" class="btn btn-red">Create account</button>
+          <div class="separator">or</div>
+          <button type="button" class="btn btn-light">
+            <i class="fab fa-google"></i> Sign in with Google
+          </button>
+          <p class="login-prompt">
+            Already have an account? <a href="#" id="login-link">Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Jumbotron -->
+
+    <div class="jumbotron">
+      <div class="slides">
+        <img src="./images/baby-sitter.png" alt="Image 1" />
+        <img src="./images/plumber (2).png" alt="Image 2" />
+        <img src="./images/cooking (2).png" alt="Image 3" />
+        <img src="./images/maid.png" alt="Image 4" />
+        <img src="./images/haircut.png" alt="Image 5" />
+      </div>
+      <div class="content">
+        <!-- <p>
+          Welcome to Alfred - your one-stop destination for all your home
+          services needs. From salon treatments to pet grooming, childcare to
+          elderly assistance, we've got you covered.
+        </p> -->
+        <h1>Just Call Alfred!</h1>
+        <p>Get the best in class home services in Bengaluru</p>
+        <button class="book-now">Book Now</button>
+      </div>
+    </div>
+    <br />
+    <div class="search-container">
+      <select class="dropdown">
+        <option value="15mins">All Services</option>
+        <option value="15mins">Get in 15 mins</option>
+        <option value="selfcare">Self Care</option>
+        <option value="homemaintenance">Home Maintenance</option>
+        <option value="electronicsrepair">Electronics Repair</option>
+      </select>
+      <input type="text" class="search-bar" placeholder="Search a service" />
+      <i class="fa fa-search search-icon"></i>
+    </div>
+
+    <!-- Add the services section with images and text overlay -->
+    <!-- Row 1 -->
+    <div class="services-row">
+      <div class="service-card" data-service="haircut">
+        <img src="./images/Shaving.png" alt="Service 1" />
+        <div class="card-text-overlay">
+          <p class="service-header">Haircut</p>
+          <p>⭐️ 4.1 (2k)</p>
+          <h3>₹ 150 ⋅ 15 mins▸</h3>
+        </div>
+      </div>
+      <!-- Repeat for other service cards, changing the data-service attribute accordingly -->
+
+      <div class="service-card" data-service="Cooking">
+        <img src="./images/cooking.png" alt="Service 2" />
+        <div class="card-text-overlay">
+          <p class="service-header">Cooking</p>
+          <p>⭐️ 4.1 (2k)</p>
+          <h3>₹ 200 ⋅ 15 mins▸</h3>
+        </div>
+      </div>
+      <div class="service-card" data-service="pet-grooming">
+        <img src="./images/pet_grooming.png" alt="Service 3" />
+        <div class="card-text-overlay">
+          <p class="service-header">Pet Grooming</p>
+          <p>⭐️ 4.1 (2k)</p>
+          <h3>₹ 800 ⋅ 15 mins▸</h3>
+        </div>
+      </div>
+      <!-- Repeat for other service cards, changing the data-service attribute accordingly -->
+      <div class="service-card" data-service="home-salon">
+        <img src="./images/home_salon.png" alt="Service 4" />
+        <div class="card-text-overlay">
+          <p class="service-header">Home Salon</p>
+          <p>⭐️ 4.1 (2k)</p>
+          <h3>₹ 400 ⋅ 15 mins▸</h3>
+        </div>
+      </div>
+      <!-- Repeat for other service cards, changing the data-service attribute accordingly -->
+    </div>
+    <!-- Row 2 -->
+    <div class="services-row">
+      <div class="service-card" data-service="elderly-care">
+        <img src="./images/elderly_care.png" alt="Service 5" />
+        <div class="card-text-overlay">
+          <p class="service-header">Elderly Care</p>
+          <p>⭐️ 4.1 (2k)</p>
+          <h3>₹ 600 ⋅ 15 mins▸</h3>
+        </div>
+      </div>
+      <!-- Repeat for other service cards, changing the data-service attribute accordingly -->
+      <div class="service-card" data-service="plumbing">
+        <img src="./images/plumber.png" alt="Service 6" />
+        <div class="card-text-overlay">
+          <p class="service-header">Plumbing</p>
+          <p>⭐️ 4.1 (2k)</p>
+          <h3>₹ 300 ⋅ 15 mins▸</h3>
+        </div>
+      </div>
+      <!-- Repeat for other service cards, changing the data-service attribute accordingly -->
+      <div class="service-card" data-service="electrician">
+        <img src="./images/electrician.png" alt="Service 7" />
+        <div class="card-text-overlay">
+          <p class="service-header">Electrician</p>
+          <p>⭐️ 4.1 (2k)</p>
+          <h3>₹ 500 ⋅ 15 mins▸</h3>
+        </div>
+      </div>
+      <!-- Repeat for other service cards, changing the data-service attribute accordingly -->
+      <div class="service-card" data-service="house-cleaning">
+        <img src="./images/house_cleaning.png" alt="Service 8" />
+        <div class="card-text-overlay">
+          <p class="service-header">House Cleaning</p>
+          <p>⭐️ 4.1 (2k)</p>
+          <h3>₹ 300 ⋅ 15 mins▸</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup Container (common for all service cards) -->
+    <div id="service-popup" class="popup-container">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <img
+          id="popup-image"
+          src=""
+          alt="Service Image"
+          style="max-width: 100%; border-radius: 10px"
+        />
+        <!-- Image element -->
+        <h2 id="popup-title"></h2>
+        <p id="popup-description"></p>
+        <!-- Add more content as needed -->
+      </div>
+    </div>
+
+    <!-- Alfred's Promise Section -->
+    <div class="alfreds-promise-card">
+      <div class="alfreds-promise-header">
+        <h2>Alfred's Promise</h2>
+      </div>
+      <div class="promises">
+        <div class="promise">
+          <!-- <img src="/fa-money-bill" alt="Best Price" /> -->
+          <i class="fa fa-money-check-dollar"></i>
+          <p>Best Price</p>
+        </div>
+        <div class="promise">
+          <!-- <img src="./images/free-resche.png" alt="Free Reschedule" /> -->
+          <i class="fa fa-shield-heart"></i>
+          <p>Free Reschedule</p>
+        </div>
+        <div class="promise">
+          <!-- <img src="./images/5star.png" alt="5 Star Rated Partner" /> -->
+          <i class="fa fa-ranking-star"></i>
+          <p>5 Star Rated Partner</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Alfred Section -->
+    <div class="why-alfred-card">
+      <div class="why-alfred-header">
+        <img
+          src="./images/Alfred-logo.png"
+          alt="Alfred Logo"
+          class="alfred-logo"
+        />
+        <h2>Why Alfred?</h2>
+      </div>
+      <ol class="why-alfred-list">
+        <li class="reason-card">
+          <p>Use of top quality, specialised & safe chemicals</p>
+        </li>
+        <li class="reason-card">
+          <p>Use of Mechanised and Professional Equipment</p>
+        </li>
+        <li class="reason-card">
+          <p>Experienced, Trained and Background Verified Partners</p>
+        </li>
+      </ol>
+    </div>
+    <!-- WhatsApp Icon -->
+
+    <div class="whatsapp-slider">
+      <div class="whatsapp-message">Book on WhatsApp</div>
+      <a href="https://web.whatsapp.com" target="_blank" class="whatsapp-icon">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="/about-us">About Us</a>
+        <a href="/careers">Careers</a>
+        <a href="/terms">Terms & Conditions</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/testimonials">Testimonials</a>
+        <a href="/sitemap">Sitemap</a>
+        <a href="/faqs">FAQs</a>
+      </div>
+      <div class="app-badges">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.alfred"
+          target="_blank"
+        >
+          <img src="./images/Play_store.png" alt="Get it on Google Play" />
+        </a>
+        <a href="https://apps.apple.com/app/idcom.alfred" target="_blank">
+          <img src="./images/App_store.png" alt="Download on the App Store" />
+        </a>
+      </div>
+      <br />
+      <div class="social-media">
+        <a href="https://www.facebook.com/alfred" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://twitter.com/alfred" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://www.instagram.com/alfred" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.reddit.com/user/alfred" target="_blank"
+          ><i class="fab fa-reddit-alien"></i
+        ></a>
+        <a href="https://www.linkedin.com/company/alfred" target="_blank"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href="https://www.youtube.com/alfred" target="_blank"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </div>
+      <div class="copyright">
+        <p>© 2025-30 Execut Technologies Pvt. Ltd.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
